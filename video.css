@@ -1,0 +1,13 @@
+.video {
+    text-align: center;
+    padding: 2rem;
+}
+
+.video h2 {
+    margin-bottom: 1rem;
+}
+
+.video video {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+}

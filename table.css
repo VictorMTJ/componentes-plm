@@ -1,0 +1,36 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+.table__row {
+    border-bottom: 1px solid #ddd;
+}
+
+.table__header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+.table__data {
+    padding: 1rem;
+    text-align: left;
+}
+
+.table--bordered {
+    border: 2px solid var(--secondary-color);
+}
+
+.table--striped .table__row:nth-child(even) {
+    background-color: var(--background-color);
+}
+
+.table--compact .table__data {
+    padding: 0.5rem;
+}
+
+.table--hover .table__row:hover {
+    background-color: var(--hover-color);
+}

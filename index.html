@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>componentes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1. Barra de navegación -->
+    <nav class="navbar navbar--dark navbar--centered">
+        <ul class="navbar__list">
+            <li class="navbar__item"><a href="#" class="navbar__link">Inicio</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">Servicios</a></li>
+            <li class="navbar__item"><a href="#" class="navbar__link">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- 2. Encabezado -->
+    <header class="header header--large header--centered header--bordered">
+        <h1>Bienvenido a Mi Página Web</h1>
+        <p>Esta es una página de ejemplo con 10 componentes diferentes.</p>
+    </header>
+
+    <!-- 3. Botón interactivo con cambio de color al hacer hover -->
+    <section class="section">
+        <button class="btn btn--primary btn--large btn--rounded btn--hover-effect" onclick="scrollToVideo()">Haz clic aquí</button>
+    </section>
+
+    <!-- 4. Imagen con texto -->
+    <section class="image-text image-text--reversed image-text--bordered image-text--centered">
+        <img src="pexels-davidboca-2261493.jpg" alt="Imagen de ejemplo">
+        <p>Esta es una imagen con texto a su lado.</p>
+    </section>
+
+    <!-- 5. Tarjeta de información -->
+    <div class="card card--shadow card--rounded card--highlighted">
+        <h2 class="card__title">TARJETA</h2>
+        <p class="card__description">Esta tarjeta es tan solo un ejemplo de un componente para nuestra</p>
+    </div>
+
+    <!-- 6. Formulario con validación simple -->
+    <form class="form form--bordered form--centered form--large">
+        <label class="form__label" for="nombre">Nombre:</label>
+        <input class="form__input" type="text" id="nombre" name="nombre" required>
+        <button class="btn btn--secondary" type="submit">Enviar</button>
+    </form>
+
+    <!-- 7. Lista -->
+    <section class="list list--spaced list--highlighted list--inline">
+        <h2 class="list__title">Lista de Tareas</h2>
+        <ul class="list__items">
+            <li class="list__item">Comprar víveres</li>
+            <li class="list__item">Lavar el auto</li>
+            <li class="list__item">Estudiar programación</li>
+        </ul>
+    </section>
+    <script>
+        // Selecciona todos los elementos de la lista
+        const listItems = document.querySelectorAll('.list__item');
+    
+        // Añade un evento 'click' para cada elemento de la lista
+        listItems.forEach(item => {
+            item.addEventListener('click', function() {
+                // Alterna la clase 'selected' al hacer clic en un elemento
+                this.classList.toggle('list__item--selected');
+            });
+        });
+    </script>
+
+    <!-- 8. Tabla -->
+    <table class="table table--bordered table--striped table--compact table--hover">
+        <thead class="table__head">
+            <tr class="table__row">
+                <th class="table__header">Nombre</th>
+                <th class="table__header">Edad</th>
+            </tr>
+        </thead>
+        <tbody class="table__body">
+            <tr class="table__row">
+                <td class="table__data">Ana</td>
+                <td class="table__data">24</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__data">Juan</td>
+                <td>30</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__data">karol</td>
+                <td>23</td>
+            </tr>
+            <tr class="table__row">
+                <td class="table__data">andres</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- 9. Menú desplegable (interactivo) -->
+    <div class="dropdown">
+        <button class="dropdown__btn">Menú desplegable</button>
+        <div class="dropdown__content">
+            <a href="#">Opción 1</a>
+            <a href="#">Opción 2</a>
+            <a href="#">Opción 3</a>
+        </div>
+    </div>
+
+    <!-- 10. Video -->
+    <section class="video" id="video">
+        <h2>Video de Ejemplo</h2>
+        <video controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+    </section>
+    <script>
+        function scrollToVideo() {
+            const videoSection = document.getElementById("video");
+            videoSection.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+    <!-- 11. Interruptor de luz (interactivo) -->
+    <section class="toggle">
+        <h2>Interruptor de luz</h2>
+        <label class="toggle__switch">
+            <input type="checkbox" class="toggle__input">
+            <span class="toggle__slider"></span>
+        </label>
+    </section>
+
+    <!-- 12. Modal interactivo -->
+    <div class="modal">
+        <button class="btn btn--primary modal__btn" id="openModal" >&copy;</button>
+        <div class="modal__content" id="myModal">
+            <span class="modal__close" id="closeModal">&times;</span>
+            <p>Este es un modal interactivo.</p>
+        </div>
+    </div>
+
+    <!-- 13. Pie de página -->
+    <footer class="footer footer--dark footer--spaced footer--centered">
+        <p class="footer__text">&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JavaScript para los componentes interactivos -->
+    <script src="js/dropdown.js"></script> <!-- JS para el menú desplegable -->
+    <script src="js/toggle.js"></script> <!-- JS para el interruptor de luz -->
+    <script src="js/modal.js"></script> <!-- JS para el modal interactivo -->
+</body>
+</html>

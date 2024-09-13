@@ -1,0 +1,26 @@
+.header {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--background-color);
+}
+
+.header h1 {
+    font-family: var(--font-family);
+    font-size: 2.5rem;
+}
+
+.header p {
+    color: var(--text-color);
+}
+
+.header--large {
+    font-size: 3rem;
+}
+
+.header--centered {
+    text-align: center;
+}
+
+.header--bordered {
+    border-bottom: 2px solid var(--secondary-color);
+}

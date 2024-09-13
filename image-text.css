@@ -1,0 +1,24 @@
+.image-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.image-text img {
+    width: 400px;
+    height: 300px;
+    max-width: 50%;
+    border-radius: var(--border-radius);
+}
+
+.image-text--reversed {
+    flex-direction: row-reverse;
+}
+
+.image-text--bordered {
+    border: 1px solid var(--secondary-color);
+}
+
+.image-text--centered {
+    text-align: center;
+}
